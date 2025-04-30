@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <h1>This is SIGNIN page</h1>
+    <section class="book_section layout_padding">
+        <div class="container">
+          <div class="heading_container">
+            <h2 style="margin-left: 700px;font-family: sans-serif;">
+              Sign in form
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6" >
+              <div class="form_container" >
+                <form action="signin" method="post" >
+                  {% csrf_token %}
+                  <div>
+                    <input type="text" name="username" class="form-control" placeholder="Username" />
+                  </div>
+                  <div>
+                    <input type="text" name="password" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="btn_box" style="margin-left: 350px;">
+                <input type="submit" value="Submit"/>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

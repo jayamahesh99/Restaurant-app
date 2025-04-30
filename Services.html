@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here is our Services</h1>
+
+    <select>
+        {% for r in data %}
+        <option>{{r.title}}</option>
+        {% endfor %}
+
+    </select>
+        <table border="1" cellspacing="0" cellpadding="8">
+            {% for r in data %}
+            <tr>
+                <td>{{r.id}}</td><td>{{r.title}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    
+</body>
+</html>
